@@ -78,3 +78,7 @@ aangezien we in de database de carts per gebruiker niet meer bijhouden. Dat moet
 
 Daarnaast kunnen we de security configuratie aanpassen. Aangezien we nu een eigen User Service hebben, kunnen we alle inkomende 
 requests toestaan zonder dat er authenticatie nodig is, met uitzondering van de /auth/me endpoint.
+
+## Implementeer Cart Service
+
+Ga naar de cart-service repository om de cart-service verder uit te werken: [Cart Service](https://github.com/jochemdeschepper/monolith-to-microservices-cart-service)
