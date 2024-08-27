@@ -1,18 +1,15 @@
 package com.example.userservice.domain;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public record User(
         UserId id,
         String username,
         String password,
         String email,
-        Name name,
-        List<Order> orders
+        Name name
 ) {
     public User(Builder builder) {
-        this(builder.id, builder.username, builder.password, builder.email, builder.name, builder.orders);
+        this(builder.id, builder.username, builder.password, builder.email, builder.name);
     }
 
     public static Builder builder() {
@@ -25,7 +22,6 @@ public record User(
         private String password;
         private String email;
         private Name name;
-        private List<Order> orders = new ArrayList<>();
 
         public Builder id(UserId id) {
             this.id = id;
@@ -49,11 +45,6 @@ public record User(
 
         public Builder name(Name name) {
             this.name = name;
-            return this;
-        }
-
-        public Builder orders(List<Order> orders) {
-            this.orders = orders;
             return this;
         }
 
